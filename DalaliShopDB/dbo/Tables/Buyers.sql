@@ -15,6 +15,9 @@
     [Pincode]         INT            NOT NULL,
     [FingerPrint]     BINARY (1)     NULL,
     [Active]          BIT            NULL,
+    [DateCreated]     DATETIME       NOT NULL,
     PRIMARY KEY CLUSTERED ([FirstName] ASC)
 );
+
+
 

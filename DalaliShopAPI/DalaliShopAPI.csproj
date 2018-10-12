@@ -150,6 +150,10 @@
       <Project>{88D1A0A6-5611-4F1D-ACB0-212CCA899538}</Project>
       <Name>DalaliShopBusLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DalaliShopCommon\DalaliShopCommon.csproj">
+      <Project>{a3c092fa-0c89-4252-98d4-0f62a7348337}</Project>
+      <Name>DalaliShopCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DalaliShopDataAccessLayer\DalaliShopDataAccessLayer.csproj">
       <Project>{be8ce354-8ab2-4959-925e-57c1a2893ae9}</Project>
       <Name>DalaliShopDataAccessLayer</Name>

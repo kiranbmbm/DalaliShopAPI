@@ -1,4 +1,5 @@
 ﻿using DalaliShopBusLogic;
+using DalaliShopCommon;
 using DalaliShopDataAccessLayer;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Web.Http;
 
 namespace DalaliShopAPI.Controllers
@@ -13,7 +15,24 @@ namespace DalaliShopAPI.Controllers
     [Route("API/Owners/{action}")]
     public class OwnersController : ApiController
     {
-        OwnersLogic ol = new OwnersLogic();
+        //OwnersLogic ol = new OwnersLogic();
+
+        private static IOwnersRepository _repository;
+        public OwnersController() : this(new OwnersRepository())
+        {
+        }
+        public OwnersController(IOwnersRepository repository)
+        {
+            _repository = repository;
+        }
+
+        private Lazy<OwnersLogic> ownersLogicObj = new Lazy<OwnersLogic>(() => new OwnersLogic(_repository));
+
+        public OwnersLogic OwnersLogicObj
+        {
+            get { return ownersLogicObj.Value; }
+
+        }
         public IHttpActionResult GetAllOwners()
         {
             DataSet results = new DataSet();
@@ -21,7 +40,7 @@ namespace DalaliShopAPI.Controllers
             {
                 //int a = 1, b = 0, c;
                 //c = a / b; 
-                results = ol.GetAllOwners(); 
+                results = OwnersLogicObj.GetAllOwners(); 
                 return Ok(results);
             }
             catch(Exception ee )
@@ -36,9 +55,26 @@ namespace DalaliShopAPI.Controllers
             return "value";
         }
 
-        // POST api/<controller>
-        public void Post([FromBody]string value)
+        [HttpPost]
+        public IHttpActionResult PostOwner(OwnerModel ownerModel)
         {
+
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    OwnersLogicObj.PostOwner(ownerModel); 
+                    return Ok();
+                }
+               else
+                {
+                    return Ok("InValid Model State in the WEBAPI  " );
+                }
+            }
+            catch (Exception ee)
+            {
+                return Ok("Falied to Execute the WEBAPI  " + ee);
+            }
         }
 
         // PUT api/<controller>/5
@@ -47,8 +83,18 @@ namespace DalaliShopAPI.Controllers
         }
 
         // DELETE api/<controller>/5
-        public void Delete(int id)
+        public IHttpActionResult DeleteOwner(int id)
         {
+            try
+            {
+              
+                OwnersLogicObj.DeleteOwner(id);
+                return Ok();
+            }
+            catch (Exception ee)
+            {
+                return Ok("Falied to Execute the WEBAPI  " + ee);
+            }
         }
     }
 }
