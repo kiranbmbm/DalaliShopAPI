@@ -13,6 +13,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DalaliShopDB", "DalaliShopD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalaliShopCommon", "DalaliShopCommon\DalaliShopCommon.csproj", "{A3C092FA-0C89-4252-98D4-0F62A7348337}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepetativeCodeGenerator", "RepetativeCodeGenerator\RepetativeCodeGenerator.csproj", "{E36626FC-3F4B-4A0F-A7CB-44FC95B5CFD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{A3C092FA-0C89-4252-98D4-0F62A7348337}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3C092FA-0C89-4252-98D4-0F62A7348337}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3C092FA-0C89-4252-98D4-0F62A7348337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E36626FC-3F4B-4A0F-A7CB-44FC95B5CFD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E36626FC-3F4B-4A0F-A7CB-44FC95B5CFD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E36626FC-3F4B-4A0F-A7CB-44FC95B5CFD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E36626FC-3F4B-4A0F-A7CB-44FC95B5CFD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
