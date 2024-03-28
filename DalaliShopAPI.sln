@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalaliShopAPI", "DalaliShopAPI\DalaliShopAPI.csproj", "{73AE1FC9-D833-4F07-8029-7D53BD89A276}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalaliShopDataAccessLayer", "DalaliShopDataAccessLayer\DalaliShopDataAccessLayer.csproj", "{BE8CE354-8AB2-4959-925E-57C1A2893AE9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalaliShopBusLogic", "DalaliShopCommonObjects\DalaliShopBusLogic.csproj", "{88D1A0A6-5611-4F1D-ACB0-212CCA899538}"
-EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DalaliShopDB", "DalaliShopDB\DalaliShopDB.sqlproj", "{2D6C2730-6C37-4FCD-9054-CAB61CCCE35D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalaliShopCommon", "DalaliShopCommon\DalaliShopCommon.csproj", "{A3C092FA-0C89-4252-98D4-0F62A7348337}"
 EndProject
@@ -33,12 +31,6 @@ Global
 		{88D1A0A6-5611-4F1D-ACB0-212CCA899538}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88D1A0A6-5611-4F1D-ACB0-212CCA899538}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88D1A0A6-5611-4F1D-ACB0-212CCA899538}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D6C2730-6C37-4FCD-9054-CAB61CCCE35D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D6C2730-6C37-4FCD-9054-CAB61CCCE35D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D6C2730-6C37-4FCD-9054-CAB61CCCE35D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{2D6C2730-6C37-4FCD-9054-CAB61CCCE35D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D6C2730-6C37-4FCD-9054-CAB61CCCE35D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D6C2730-6C37-4FCD-9054-CAB61CCCE35D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{A3C092FA-0C89-4252-98D4-0F62A7348337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A3C092FA-0C89-4252-98D4-0F62A7348337}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3C092FA-0C89-4252-98D4-0F62A7348337}.Release|Any CPU.ActiveCfg = Release|Any CPU
